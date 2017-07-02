@@ -23,8 +23,6 @@ class Message extends React.Component {
         return this.preRender(this.props.isUser(this.props.details.pseudo))
     }
 
-    // A METTRE ABSOLUMENT!! nous permettent de vérifier si nos Props sont bien passées
-    // de quel type nous voulons que les Prop soient (fonction, chaine de caractères.. etc)
     static propTypes = {
         details: React.PropTypes.object.isRequired
     };
