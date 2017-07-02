@@ -1,0 +1,241 @@
+/* ----------------------------
+	Typo
+---------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body, .box > *, textarea, input {
+	font-family: 'Open Sans', sans-serif;
+	color: #1d1d1d;
+	overflow: hidden;
+}
+
+/* ----------------------------
+	STRUCTURE
+---------------------------- */
+html {
+  box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 18px;
+	background-color: #f1e5df;
+}
+.connexionBox {
+	background-color: #f1e5df;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+.connexion {
+	max-width: 500px;
+}
+.connexion > * {
+	width: 100%;
+}
+.connexion > input {
+	box-sizing: border-box;
+	border-radius: 50px;
+	border: 0;
+	font-size: 18px;
+	padding: 10px 10px 10px 20px;
+	outline: none;
+	box-shadow: 0px 0px 25px -5px #dbcac0;
+}
+.box {
+	margin: auto;
+	display:flex;
+	justify-content: center;
+ 	flex-wrap: wrap;
+ 	align-items: flex-end;
+	width: 100%;
+	max-width: 500px;
+	height: calc(100vh - 100px);
+	padding: 40px 0 40px;
+	background-color: #fcf8f4;
+	box-shadow: 9px 9px 28px -1px #dbcac0;
+	border-radius: 8px;
+}
+
+.box > * {
+	width: 100%;
+}
+
+/* ----------------------------
+	MESSAGES
+---------------------------- */
+
+.messages {
+	flex: 1 1 100%;
+	/*border: 5px solid red;*/
+	box-sizing: border-box;
+	align-self: flex-end;
+	max-height: calc(100vh - 310px);
+	overflow-y: scroll;
+	-webkit-overflow-scrolling:touch;
+	padding: 0 40px 0;
+}
+
+.messages::-webkit-scrollbar {
+    width: 0.4em;
+}
+ 
+.messages::-webkit-scrollbar-thumb {
+  background-color: #eceff1;
+}
+
+/* ----------------------------
+	MESSAGE
+---------------------------- */
+
+.message {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.message > * {
+	padding: 10px 15px;
+	max-width: 75%;
+	border-radius: 2px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.message p {
+	font-size: 16px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 15px -3px #c1c1c1;
+}
+
+.not-user-message {
+	background-color: #ffffff;
+	align-self: flex-start;
+	position: relative;
+	margin: 25px 0;
+}
+
+.not-user-message strong {
+	font-size: 14px;
+	position: absolute;
+	top: -30px;
+}
+
+.not-user-message:after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 0;
+	border-width: 12px 12px 0px 0;
+	border-style: solid;
+	border-color: #ffffff transparent;
+}
+
+.user-message {
+	background-color: #99c3c0;
+	color: #fff;
+	align-self: flex-end;
+	position: relative;
+	margin: 10px 0;
+}
+
+.user-message:after {
+	content: '';
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 0;
+	border-width: 0px 0 12px 12px;
+	border-style: solid;
+	border-color: #99c3c0 transparent;
+}
+
+/* ----------------------------
+	FORMULAIRE
+---------------------------- */
+
+.form {
+	align-self: flex-end;
+	padding: 0 40px 0;
+}
+
+form button {
+	width: 20%;
+	float: right;
+}
+
+.form textarea {
+	width: 100%;
+	border: none;
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+
+.form span {
+	display: block;
+	background-color: #ffffff;
+	height: 2px;
+	margin: 30px auto;
+
+}
+
+textarea {
+	box-sizing: border-box;
+	height: 120px;
+	border: 5px solid #2196F3;
+	border-width: 0 0 5px 0;
+	background-color: #ECEFF1;
+	outline: none;
+	font-size: 16px;
+	padding: 5px 10px;
+}
+
+.info {
+	text-align: right;
+	padding-right: 5px;
+}
+
+button {
+	font-size: 17px;
+	border-radius: 50px;
+	border: none;
+	box-shadow: 0px 0px 25px -5px #dbcac0;
+	color: white;
+	background-color: #99c3c0;
+	margin-top: 10px;
+	padding: 10px;
+	cursor: pointer;
+	transition: all 0.2s linear;
+	letter-spacing: 1px;
+	outline-style: none;
+
+}
+
+button:disabled {
+	background-color: #eceff1;
+	cursor:not-allowed;
+	color: white;
+}
+
+button:hover {
+	background-color: #74a9ac;
+	transition: all 0.2s linear;
+}
+
+/* ----------------------------
+	NotFound
+---------------------------- */
+
+.notFound {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	background: #eceff1;
+}
+
